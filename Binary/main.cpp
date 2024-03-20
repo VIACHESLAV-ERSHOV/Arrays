@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 void main()
@@ -7,9 +7,9 @@ void main()
 
     int decimal;
 
-    cout << "äåñÿòè÷íîå ÷èñëî: "; cin >> decimal;
+    cout << "Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> decimal;
     
-    cout << "\nÄâîè÷íîå ÷èñëî: ";
+    cout << "\nÐ”Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 
     for (int i = decimal; i >= 0; i--)
     {
