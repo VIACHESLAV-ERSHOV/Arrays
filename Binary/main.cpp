@@ -14,12 +14,15 @@ void main()
     for (int i = decimal; i >= 0; i--)
     {
         if ((1 << i) & decimal)
+            
         {
             cout << "1"; 
+            --i;
         }
         else
         {
             cout << "0";
+            --i;
         }
     }
 
