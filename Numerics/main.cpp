@@ -63,7 +63,7 @@ void main()
 	for (--i; i >= 0; i--)
 	{   
 		cout << (int)hex[i];
-		cout <<(hex[i] < 10 ?  ((char)hex[i]) : ((char)(hex[i] + 55)));
+		cout <<(hex[i] < 10 ?  (char)hex[i] : (char)(hex[i] + 55));
 		
 	}
 	cout << endl;
