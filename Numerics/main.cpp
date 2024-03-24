@@ -2,7 +2,8 @@
 using namespace std;
 
 //#define DEC_2_BIN
-#define DEC_2_HEX
+//#define DEC_2_HEX
+#define DEC_2_HEX_TERNARY
 
 void main()
 {
@@ -29,6 +30,7 @@ void main()
 	cout << endl;
 #endif // DEC_2_BIN
 
+#ifdef DEC_2_HEX
 	const int MAX_HEX_CAPALICY = 8;
 	char hex[MAX_HEX_CAPALICY] = {};
 	int i = 0;
@@ -39,11 +41,31 @@ void main()
 	}
 	for (--i; i >= 0; i--)
 	{
+
 		if (hex[i] < 10)
 			cout << (int)hex[i];
 		else
 			cout << char(hex[i] + 55);
 	}
 	cout << endl;
-	//cout << "шестнадцатичное число = " << hex << decimal << endl;
+	//cout << "шестнадцатичное число = " << hex << decimal << endl;  
+#endif // DEC_2_HEX
+
+	const int MAX_HEX_CAPALICY = 8;
+	char hex[MAX_HEX_CAPALICY] = {};
+	
+	int i = 0;
+	for (; decimal; i++)
+	{
+		hex[i] = decimal % 16; 
+		decimal /= 16;          
+	}
+	for (--i; i >= 0; i--)
+	{   
+		cout << (int)hex[i];
+		cout <<(hex[i] < 10 ?  ((char)hex[i]) : ((char)(hex[i] + 55)));
+		
+	}
+	cout << endl;
+main();
 }
