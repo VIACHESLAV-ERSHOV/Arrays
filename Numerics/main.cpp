@@ -58,12 +58,15 @@ void main()
 	for (; decimal; i++)
 	{
 		hex[i] = decimal % 16; 
+		hex[i] += hex[i] < 10 ? 48 : 55;
 		decimal /= 16;          
 	}
+	//for (; decimal; hex[i++] = decimal % 16, decimal /= 16);
 	for (--i; i >= 0; i--)
 	{   
-		
-		cout << char(hex[i] < 10 ?  hex[i]+48 : (hex[i] + 55));
+		cout << hex[i];
+		//cout << char(hex[i] < 10 ?  hex[i]+48 : (hex[i] + 55));
+		//cout << char(hex[i] < 10 ? hex[i] + '0' : hex[i] + 'A' - 10);
 		
 	}
 	cout << endl;
