@@ -11,15 +11,25 @@ void main()
 	const int n = 5;
 	int arr[n];
 	int minRand, maxRand;
-	cout << "Введите минимальное случайное число: "; cin >> minRand;
-	cout << "Введите максимальное случайное число: "; cin >> maxRand;
+	do
+	{
+		system("CLS"); //функция system() позволяет вызвать любую команду командной строки (консоли)
+		               //
+		cout << "Введите минимальное случайное число: "; cin >> minRand;
+		cout << "Введите максимальное случайное число: "; cin >> maxRand;
+		if (minRand >= maxRand)
+		{
+			std::cerr << "Error: введены некорректные числа" << endl;
+			system("PAUSE");
+		}
+	} while (minRand >= maxRand);
 	//запалнение массива случайными числами:
 	for (int i = 0; i < n; i++)
 	{
 		//arr[i] = rand()%100+50;     //Функция rand() возвращает псевдослучайное число в диапазоне от 0 до 32 767 (RAND_MAX)
-		arr[i]= rand() % (maxRand - minRand) + minRand;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
-	
+
 	//вывод массива на экран:
 	for (int i = 0; i < n; i++)
 	{
@@ -40,11 +50,11 @@ void main()
 				arr[i] = arr[j];
 				arr[j] = buffer;
 			}
-			
+
 		}
 	}
-	cout<<endl;
-	
+	cout << endl;
+
 	//вывод отсортированного массива на экран:
 	for (int i = 0; i < n; i++)
 	{
