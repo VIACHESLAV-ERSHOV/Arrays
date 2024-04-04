@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -28,7 +28,7 @@ void main()
 			}
 			if (search > 1)
 			{
-				cout << "÷èñëî " << arr[i] << "ïîâòîðÿåòñÿ " << search << "ðàç " << endl; break;
+				cout << "Ñ‡Ð¸ÑÐ»Ð¾ " << arr[i] << "Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€ÑÐµÑ‚ÑÑ " << search << "Ñ€Ð°Ð· " << endl; break;
 			}
 		}
 	}
